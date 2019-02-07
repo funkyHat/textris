@@ -1,6 +1,7 @@
 
 from random import choice
 
+import numpy
 import board
 
 
@@ -25,3 +26,27 @@ shapes = [line, square, s1, s2, l1, l2, t]
 
 def get_shape():
     return choice(shapes)
+
+
+def rotate_left(s):
+    new_points = []
+    for (x, y), value in s.iterdata():
+        if value == 1:
+            new_points.append((y, -x + 3))
+    return shape(*new_points)
+
+
+def rotate_right(s):
+    new_points = []
+    for (x, y), value in s.iterdata():
+        if value == 1:
+            new_points.append((-y + 3, x))
+    return shape(*new_points)
+
+
+if __name__ == "__main__":
+    t.draw()
+    t = rotate_right(t)
+    t.draw()
+    t = rotate_left(t)
+    t.draw()
