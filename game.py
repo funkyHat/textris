@@ -54,3 +54,7 @@ while game_alive:
         process_instruction(instruction, desc)
         piece_alive = check_and_move_down()
     print("GAME OVER")
+
+def rotate_left(*points):
+    # rotate
+    return [(point[1], -1 * point[0] + 4) for point in points]
