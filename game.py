@@ -57,4 +57,7 @@ while game_alive:
 
 def rotate_left(*points):
     # rotate
-    return [(point[1], -1 * point[0] + 4) for point in points]
+    return [(point[1], -1 * point[0] + 3) for point in points]
+
+def rotate_right(*points):
+    return [(-1*point[1] + 3, point[0]) for point in points]
