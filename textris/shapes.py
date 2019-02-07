@@ -1,7 +1,7 @@
 import board
 
 
-def shape(coords):
+def shape(*coords):
     shape = board.Board((4, 4))
     for coord in coords:
         shape[coord] = 1
